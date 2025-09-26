@@ -1,0 +1,102 @@
+.container{
+    display: flex;
+    justify-content: flex-start ;  /*  justify-content: flex-end        center;  */   
+    background-color: rgb(168, 129, 184);
+    width: 500px;
+    height:22px;
+
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(232, 255, 127);
+    transition: background-color 2s;
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
+    border-radius: 7px;
+}
+.box:hover{
+    background-color: rgba(4, 155, 255, 0.712);
+}
+.container2{
+    display: flex;
+    justify-content: center ;      
+    background-color:rgb(168, 129, 184);
+    width: 500px;
+    height:22px;
+
+}
+.container3{
+    display: flex;
+    justify-content: flex-end ;         
+    background-color: rgb(168, 129, 184);
+    width: 500px;
+    height:22px;
+
+}
+.container4{
+    display: flex;
+    justify-content: space-between ;      
+    background-color: rgb(168, 129, 184);
+    width: 500px;
+    height:22px;
+
+}
+.container5{
+    display: flex;
+    justify-content: space-around;      
+    background-color:rgb(168, 129, 184);
+    width: 500px;
+    height:22px;
+
+}
+.container6{
+    display: flex;
+    justify-content: space-evenly ;  
+    background-color: rgb(168, 129, 184);
+    width: 500px;
+    height:22px;
+
+}
+.container7{
+    display: flex;
+    justify-content: center ;      
+    background-color: rgb(168, 129, 184);
+    width: 500px;
+    height:22px;
+
+}
+.container8{
+    display: flex;
+    justify-content: space-between;      
+    background-color: rgb(168, 129, 184);
+    width: 500px;
+    height:22px;
+
+}
+.container9{
+    display: flex;
+    justify-content: space-around ;   
+    background-color:rgb(168, 129, 184);
+    width: 500px;
+    height:22px;
+
+}
+.container10{
+    display: flex;
+    justify-content: center ;     
+    background-color: rgb(168, 129, 184);
+    width: 500px;
+    height:25px;
+
+}
+
+p{
+    font-size: 7px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
