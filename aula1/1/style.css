@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.topo-site{
+    background: #505050;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.content-main{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.card-content-main{
+    text-align: center;
+    padding: 30px;
+    flex: 1;
+    background: #eaeaea;
+}
+@media (max-width: 768px){
+    .content-main{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px){
+    body {
+        background-color: #747474;
+    }
+    .card-content-main{
+        font-size: 14px;
+        padding: 20px;
+    }
+}

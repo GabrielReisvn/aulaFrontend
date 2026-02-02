@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+}
+.menu-nav{
+    display: flex;
+    
+    justify-content: center;
+    gap: 20px;
+    background: #d4d4d4;
+    padding: 15px;
+    
+}
+.menu-nav a{
+    color: #368694;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.08s;
+}
+.menu-nav a:hover{
+    text-decoration: underline;
+    transform: scale(1.12);
+}
+@media (max-width: 600px){
+    .menu-nav{
+        flex-direction: column;
+        align-items: center;
+    }
+}
