@@ -82,7 +82,7 @@ console.log(carro);
 
 
 
-//Array
+//Array  
 let numeros = [10, 20, 30, 40, 50];
 console.log(numeros[0]); //Acessando o primeiro elemento do array numeros
 
@@ -110,6 +110,5 @@ class PessoaSistema {
 let nome_completo = "Carlos Santos";
 //Kebab case
 //todas as palavras são minúsculas e separadas por hífens (-)
-
-//        let nome-completo = "Ana Souza"; 
+//  let nome-completo = "Ana Souza"; 
 //!!!!!!!!não é permitido em JavaScript, pois o hífen é interpretado como operador de subtração
