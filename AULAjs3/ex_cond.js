@@ -132,3 +132,19 @@ else if (cor === "amarelo"){
     console.log(`Sinal de Atenção`);}
 else if (cor === "verde"){
     console.log(`Sinal Aberto`);}
+
+//extra
+
+let nota1 = 10;
+faltas = 2;
+if (nota1 >= 9 && faltas < 5){
+    console.log (`Aprovado com excelencia!`);}
+    
+    else if (nota1 < 5 || faltas >= 20){
+        console.log(`Reprovado!`);}
+    
+        else if (nota1 >= 5 && nota1 < 7){
+        console.log(`Recuperação!`);}
+    
+        else if (nota1 >=7 ){
+        console.log(`Aprovado!`);}
