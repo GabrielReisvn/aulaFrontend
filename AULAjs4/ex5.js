@@ -40,6 +40,7 @@ console.log(`6-O valor em reais é: ${dolarParaReal(3.2, 5.17)}`);
 function aumentoSalario(salario){
     return salario *1.1;
 }
+console.log(`7- ${aumentoSalario(750)}`);
 //8
 function parOuImpar(numero){
     if(numero % 2 == 0){
@@ -49,24 +50,27 @@ function parOuImpar(numero){
         return "impar";
     }
 }
+console.log(`8- ${parOuImpar(5)}`);
 
 //9
 function umAtDez(){
     let i=0;
     while(i<=10){
-        console.log(i);
+        console.log(`9- ${i}`);
         i++;
     }
-    
+
 }
+console.log(umAtDez());
 //10
 function ate(numero){
     let i =0;
     while(i<=numero){
-        console.log(i);
+        console.log(`10- ${i}`);
     i++;}
     
 }
+console.log(ate(10));
 //11
 function somaDez(){
     let acumulador = 0;
@@ -75,7 +79,7 @@ function somaDez(){
     }
     return acumulador;
 }
-
+console.log(`11- ${somaDez()}`);
 //12 
 function parCont(n){
     let contador = 0;
@@ -96,14 +100,15 @@ function tabuada(numero){
         console.log(`${numero} x ${i} = ${numero*i}`);
     }
 }
-// console.log(tabuada(27))
+console.log(tabuada(2));
 
 //14
 function regresiva(n){
-    for(n>=0; n--;){
+    for(n>0; n--;){
         console.log(n)
     }
 }
+console.log(regresiva(10));
 //15
 function ache(x){
     let i = 0;
@@ -115,7 +120,7 @@ function ache(x){
         console.log(`Achei ${x}!`);
     }
 }
-console.log(ache(0));
+console.log(ache(3));
 
 //16
 function parSomaAte(n){
@@ -128,7 +133,7 @@ function parSomaAte(n){
     }
     return acumulador;
 }
-console.log(parSomaAte(10));
+console.log(parSomaAte(4));
 
 //17
 function imparCont(n){
@@ -139,15 +144,18 @@ function imparCont(n){
             console.log(`estou no ${i}, já contei ${contador} números impares`);
         }
     }
+    return (`Contei ${contador} números impares`);
 }
-
+console.log(imparCont(10));
 //18
 function media2Numero(x,y){
     let m = (x+y)/2;
     return m;
 }
+console.log(`18- ${media2Numero(5, 7)}`);
 
 //19
 function quadrado(n){
     return n*4;
 }
+console.log(`19- ${quadrado(5)}`);
