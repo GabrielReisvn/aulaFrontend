@@ -27,3 +27,19 @@ function aumentoSalario(salario){
     return salario *1.25;
 }
 console.log(aumentoSalario(750));
+
+
+//for
+//o fot é uma estrutura de repetição que executa um bloco de código um número específico de vezes.
+// for(inicio , condição, incremento){
+    //bloco de código
+//}   
+//inicio --->onde começa
+//condição ---> até quando vai repetir
+//incremento ---> como o valor muda a cada repetição
+
+//exemplo de for    
+for(let i=1; i<=5; i++){
+
+    console.log(i);
+}
