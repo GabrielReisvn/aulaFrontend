@@ -181,6 +181,22 @@ document.addEventListener("keydown",function(e){
     
 })
 
+//9
+document.addEventListener("keydown", function(e) {
+    const tecla = e.key.toLowerCase();
+    
+    if (cores[tecla]) {
+        const cor = lisrgb[tecla];
+        document.body.style.backgroundColor = lisrgb.nomeCor;
+        document.body.H2.innerHTML = `${lisrgb.nome} definida!`;
+        exibirRgb(tecla, lisrgb.nome);
+    } else {
+        document.body.style.backgroundColor = "#8b8b8b";
+        document.body.H2.innerHTML = `tecla ${e.key} sem cor definida`;
+        exibirRgb("gray", "Cinza");
+    }
+});
+
 //10
 document.addEventListener("keydown",function(e){
     if (e.key.toLowerCase() === "r"){
@@ -250,3 +266,77 @@ docum0ent.addEventListener("keydown",function(e){
     }
 }
 })
+
+
+
+
+
+
+
+
+/////////// codigo freito!!!!!!!!!!!
+
+
+// Histórico educacional removido para clareza
+
+//Objeto com mapeamento de cores
+const cores = {
+    r: { hex: "rgb(255, 109, 109)", nome: "Vermelho", texto: "VERMELHOOO!!!!!!" },
+    b: { hex: "rgb(34, 131, 221)", nome: "Azul", texto: "AZULLL!!!!!!" },
+    g: { hex: "#33f83dff", nome: "Verde", texto: "VERDE!!!!!!" },
+    y: { hex: "#f8f533ff", nome: "Amarelo", texto: "AMARELOOO!!!!!!" },
+    p: { hex: "#a933f8ff", nome: "Roxo", texto: "ROXOOOO!!!!!!" }
+};
+
+ //Mapa RGB para console
+lisrgb = {
+    "red": "rgb(255, 109, 109)",
+    "blue": "rgb(34, 131, 221)",
+    "green": "rgb(51, 248, 61)",
+    "yellow": "rgb(248, 245, 51)",
+    "rox": "rgb(169, 51, 248)",
+    "gray": "rgb(139, 139, 139)"
+};
+
+//9 - Função para exibir RGB no console
+function exibirRgb(cor, nomeCor) {
+    console.log(`Cor aplicada: ${nomeCor}`);
+    console.log(`Valor: ${lisrgb[cor] || cor}`);
+}
+
+// Variáveis de modo
+darkMode = false;
+
+// Listener único consolidado
+document.addEventListener("keydown", function(e) {
+    const tecla = e.key.toLowerCase();
+
+    //Modo escuro (tecla n)
+    if (tecla === "n") {
+        darkMode = !darkMode;
+        if (darkMode) {
+            document.body.style.backgroundColor = "#000";
+            document.body.style.color = "#fff";
+            console.log(`modo escuro ativado`);
+        } else {
+            document.body.style.backgroundColor = "#fff";
+            document.body.style.color = "#000";
+            console.log(`modo escuro desativado`);
+        }
+        return;
+    }
+
+    //Mudança de cores (teclas r, b, g, y, p)
+    if (cores[tecla]) {
+        const cor = cores[tecla];
+        document.body.style.backgroundColor = cor.hex;
+        document.body.H2.innerHTML = cor.texto;
+        exibirRgb(tecla, cor.nome);
+    } else {
+        document.body.style.backgroundColor = "#8b8b8b";
+        document.body.H2.innerHTML = `tecla ultilizada ${e.key} sem cor definida`;
+        exibirRgb("gray", "Cinza");
+    }
+
+    console.log(`tecla ultilizada ${e.key}`);
+});
