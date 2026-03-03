@@ -19,7 +19,14 @@
     overflow: hidden;       /* Esconde o que sai da tela */
     background: linear-gradient(#87CEEB, #E0F6FF); /* Céu azul */
 }
-
+/* Contador na tela */
+.jogo h2{
+    align-self: center;
+    justify-self: center;
+    color: #cc0000;
+    margin-top: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 /* ================================================== */
 /* OBSTÁCULO - Cano que vem da direita */
 /* ================================================== */
@@ -43,7 +50,7 @@
 
 /* Classe que faz o Mario pular (ativada pelo JavaScript) */
 .pular {
-    animation: pularMario 500ms ease-out;
+    animation: pularMario 700ms ease-out;
 }
 
 /* ================================================== */
@@ -59,7 +66,7 @@
 /* TELA DE FIM - Game Over */
 /* ================================================== */
 .fim {
-    visibility: hidden;     /* Invisível até perder */
+    visibility:hidden;     /* Invisível até perder */
 
     /* Centraliza o botão */
     display: flex;

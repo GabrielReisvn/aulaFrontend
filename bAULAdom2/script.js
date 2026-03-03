@@ -281,11 +281,11 @@ docum0ent.addEventListener("keydown",function(e){
 
 //Objeto com mapeamento de cores
 const cores = {
-    r: { hex: "rgb(255, 109, 109)", nome: "Vermelho", texto: "VERMELHOOO!!!!!!" },
-    b: { hex: "rgb(34, 131, 221)", nome: "Azul", texto: "AZULLL!!!!!!" },
-    g: { hex: "#33f83dff", nome: "Verde", texto: "VERDE!!!!!!" },
-    y: { hex: "#f8f533ff", nome: "Amarelo", texto: "AMARELOOO!!!!!!" },
-    p: { hex: "#a933f8ff", nome: "Roxo", texto: "ROXOOOO!!!!!!" }
+    r: { cor1: "rgb(255, 109, 109)", nome: "Vermelho", texto: "VERMELHOOO!!!!!!" },
+    b: { cor1: "rgb(34, 131, 221)", nome: "Azul", texto: "AZULLL!!!!!!" },
+    g: { cor1: "#33f83dff", nome: "Verde", texto: "VERDE!!!!!!" },
+    y: { cor1: "#f8f533ff", nome: "Amarelo", texto: "AMARELOOO!!!!!!" },
+    p: { cor1: "#a933f8ff", nome: "Roxo", texto: "ROXOOOO!!!!!!" }
 };
 
  //Mapa RGB para console
@@ -329,7 +329,7 @@ document.addEventListener("keydown", function(e) {
     //Mudança de cores (teclas r, b, g, y, p)
     if (cores[tecla]) {
         const cor = cores[tecla];
-        document.body.style.backgroundColor = cor.hex;
+        document.body.style.backgroundColor = cor.cor1;
         document.body.H2.innerHTML = cor.texto;
         exibirRgb(tecla, cor.nome);
     } else {
