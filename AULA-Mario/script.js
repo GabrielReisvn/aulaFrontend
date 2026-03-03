@@ -119,20 +119,24 @@ function reiniciarJogo(){
             if (spanPulos) spanPulos.innerText = contador;
 
                 //======= Tela fim =======
-                cano.style.animation = 'none';
-                cano.style.left = posicaoCano +'px';
+            cano.style.animation = 'none';
+            cano.style.left = posicaoCano +'px';
         
-                mario.style.animation = 'none';
-                mario.style.bottom = posicaoMario +'px';
-                mario.src ='./img/game-over.png';
-                mario.style.width = '80px';
+            mario.style.animation = 'none';
+            mario.style.bottom = posicaoMario +'px';
+            mario.src ='./img/game-over.png';
+            mario.style.width = '80px';
 
-                telaFim.style.visibility = 'visible';
+            telaFim.style.visibility = 'visible';
         
              
-                //debug console
-                clearInterval(loopJogo);
+            //debug console
+            clearInterval(loopJogo);
 
         }
     },10)
 }
+
+botaoReiniciar.addEventListener('click',function(){
+    reiniciarJogo()
+});
