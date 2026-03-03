@@ -22,10 +22,13 @@
 /* Contador na tela */
 .jogo h2{
     align-self: center;
-    justify-self: center;
+    justify-self: self-end;
     color: #cc0000;
     margin-top: 50px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-right: 170px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 30px;
 }
 /* ================================================== */
 /* OBSTÁCULO - Cano que vem da direita */
