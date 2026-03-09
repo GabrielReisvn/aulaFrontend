@@ -4,7 +4,7 @@ async function HuskyAPI() {
 
     const dados2 = await resposta2.json();
 
-    console.log('🐶Husky; ' ,dados2);
+    console.log('🐶 Husky; ' ,dados2);
     console.log('URL da imagem ', dados2.message);
     
 }
