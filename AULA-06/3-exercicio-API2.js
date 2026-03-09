@@ -28,11 +28,9 @@ async function Func2API() {
     for (let raca in dados2.message) {
         if (dados2.message[raca].length > 0 ){
             totalRacas++;
-            console.log('Raça: ', dados2.message ,' Sub-raça(s):', dados2.message[raca]);
+            console.log('Raça: ', raca ,' Sub-raça(s):', dados2.message[raca]);
             
-
         }
-           
     } 
     console.log(totalRacas);
 }
