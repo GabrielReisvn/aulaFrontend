@@ -32,6 +32,6 @@ async function Func2API() {
             
         }
     } 
-    console.log(totalRacas);
+    console.log(totalRacas `Raças com sub-raças`);
 }
 Func2API();
