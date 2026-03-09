@@ -1,0 +1,37 @@
+#HTTP e status code 
+cliente - servidor
+Comunicação "HTTP"
+
+toda requisição possui:
+-metodo(ação)
+-status code (resposta)
+
+#Metodos HTTP
+
+GET - Buscar
+POST - Criar
+PUT - Atualizar tudo
+PATCH - Atualizar parte 
+DELETE - Remover
+
+---
+# Status code 
+2xx - sucesso
+3xx - redicioramento
+4xx - erro do cliente
+5xx - erro do servidor
+
+---
+
+# Principais status
+200 - ok 
+201 - criado 
+400 - requisição invalida 
+401 - não autorizado 
+403 - ptoibido 
+404 - não encontrado
+
+---
+#erros do servidor
+500 - erro interno 
+503 - serviço indisponivel

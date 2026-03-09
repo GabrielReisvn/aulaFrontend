@@ -1,0 +1,8 @@
+{
+    "produto":{
+        "nome": "Notebook",
+        "preço" : 3500,
+        "quantidade": 10,
+        "disponivel": true
+    }
+}

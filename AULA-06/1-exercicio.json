@@ -1,0 +1,8 @@
+{
+    "filme": {
+        "nome": "Todo mundo em pânico",
+        "diretor": "Keenen Ivory Wayans",
+        "ano" : 2000,
+        "genero" : ["terror" , "comedia", "satira"]
+    }
+}
