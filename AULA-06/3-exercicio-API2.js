@@ -24,7 +24,7 @@ async function Func2API() {
     console.log('==============');
 
     let totalRacas = 0;
-    
+
     for (let raca in dados2.message) {
         if (dados2.message[raca].length > 0 ){
             totalRacas++;
@@ -34,4 +34,38 @@ async function Func2API() {
     } 
     console.log(totalRacas);
 }
-Func2API();
+// Func2API();
+
+
+async function Func3API() {
+
+    const resposta2 = await fetch('https://dog.ceo/api/breeds/list/all')
+
+    const dados2 = await resposta2.json();
+    console.log('==============');
+    console.log('===== 03 =====');
+    console.log(' DADOS: ' ,dados2.message);
+    console.log('==============');
+
+    let totalRacas = 0;
+    let racaSelecionada = null;
+    
+    for (let raca in dados2.message) {
+        console.log('Raça: ', raca ,' Sub-raça(s):', dados2.message[raca]);
+        if (!racaSelecionada) {
+            racaSelecionada = raca;
+        }
+            
+        const resposta3 = await fetch(`https://dog.ceo/api/breeds/${racaSelecionada}/images`)
+        const dados3 = await resposta3.json();
+
+        console.log('==========================');
+        console.log('===== 03 =====');
+        console.log(' DADOS: ' ,dados3.message);
+        console.log('==============');
+    } 
+    console.log(totalRacas);
+
+    
+}
+Func3API();
