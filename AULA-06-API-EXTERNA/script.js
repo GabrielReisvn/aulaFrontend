@@ -3,7 +3,7 @@
 //================================
 
 //Pegar a imagem do cachorro
-const dogImage = document.getElementById("docImage");
+const dogImage = document.getElementById("dogImage");
 //elemento onde aparece o nome da raça
 const breedName = document.getElementById("breedName");
 //botão que busca cachorro aleatório
@@ -11,20 +11,15 @@ const randomBtn = document.getElementById("randomBtn");
 //botão que busca a raça
 const searchBtn = document.getElementById("searchBtn");
 //campo de input onde o usuário digita a raça
-const breedIpnut = document.getElementById("breedIpnut");
+const breedInput = document.getElementById("breedInput");
 // área onde a imagem aparece
 const dogArea = document.querySelector(".dog-area");
 
-//=======================
-// URL BASE DA API
-//=======================
-
-//endereço principal da API
+//endereço base da API
 const API_BASE = "https://dog.ceo/api"
 
-//===========================
+
 // FUNÇÃO QUE CHAMA A API
-//===========================
 
 //função assíncrona que faz requisição HTTP
 async function fetchFromApi(endpoint){
@@ -84,4 +79,57 @@ async function fetchFromApi(endpoint){
     }
 
 }
-fetchFromApi ("/breeds/image/random");
+// fetchFromApi ("/breeds/image/random");
+
+//=========================
+// FUNÇÂO DE AÇÂO
+//=========================
+
+// buscar um cachorro aleatorio
+
+function getRandomDog(){
+    fetchFromApi("/breeds/image/random");
+
+}
+
+// busca cachorro por raça
+function getBreedDog(){
+
+    // pegar dado digitado
+    let breed = breedInput.value.toLowerCase().trim();
+
+    // verificar campo vazio
+    if (!breed){
+        alert('Digite uma raça!');
+        return;
+    }
+    
+    // chamar api com raça digitada
+    fetchFromApi(`/breed/${breed}/images/random`);
+    
+}
+
+//=========================
+// EVENTOS
+//=========================
+
+
+// CLIQUE DO BOTÃO
+randomBtn.addEventListener('click', getRandomDog);
+
+// CLIQUE NO BOTÃO BUSCAR
+searchBtn.addEventListener('click', getBreedDog);
+
+// CLIQUE NA IMAGEM GERA NOVO CACHORRO
+dogImage.addEventListener('click', getRandomDog);
+
+//ENTER DENTRO DO INPUT
+breedInput.addEventListener('keypress', function(event){
+    // se a tecla pressionada for enter
+    if(event.key === 'Enter'){
+        getBreedDog();
+    }
+
+});
+
+getRandomDog();
