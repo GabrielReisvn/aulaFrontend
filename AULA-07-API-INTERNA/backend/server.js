@@ -85,7 +85,7 @@ app.get("/api/cachorros/aleatorio", (req, res)=>{
 
     res.json({
         // status da resposta
-        status: "sucess",
+        status: "sucess",  
         message: `http://localhost:${PORT}/fotos/${item}`
     });
 });
@@ -116,3 +116,16 @@ app.get("/api/cachorros/:raca", (req, res) => {
     });
 
 });
+
+//===================================
+// INICIAR SERVIDOR
+//===================================
+
+// iniciar o servidor
+
+app.listen(PORT, () => {
+    console.log(`🚀 servidor rodando em http://localhost:${PORT}`);
+    console.log(`📂 coloque fotos diretamente na pasta data/fotos`);
+    
+    
+})
